@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Montserrat:wght@500;700&display=swap');
+:root {
+	/* Prime colors */
+	--dark-cyan: hsl(158, 36%, 37%);
+	--cream: hsl(30, 38%, 92%);
+	--cream-light: hsl(38, 62%, 95%);
+
+	/* neutral colors */
+	--very-dark-blue: hsl(212, 21%, 14%);
+	--dark-grayish-blue: hsl(228, 12%, 48%);
+	--white: hsl(0, 0%, 100%);
+
+	--fs-main: 1.4rem;
+	--ff-montserat: 'Montserrat', sans-serif;
+	--ff-frounces: 'Fraunces', serif;
+}
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	font-size: 62.2%;
+}
+
+body {
+	background-color: var(--cream);
+	font-size: var(--fs-main);
+	font-family: var(--ff-montserat);
+	display: grid;
+	justify-content: center;
+	place-items: center;
+	min-height: 100vh;
+	width: 100vw;
+}
+.container {
+	max-width: 144rem;
+	padding: 0 1.5rem;
+}
+.card {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	max-width: 60rem;
+	border-radius: 1.5rem;
+	background-color: #f9f9f9;
+}
+
+.card__img {
+	width: 100%;
+	object-fit: contain;
+	border-top-left-radius: 1.5rem;
+	border-bottom-left-radius: 1.5rem;
+}
+.card__category {
+	margin: 0 0 2rem;
+	letter-spacing: 0.5rem;
+	text-transform: uppercase;
+	font-size: 1rem;
+	font-weight: 700;
+	color: var(--dark-grayish-blue);
+}
+.card__text {
+	display: flex;
+	flex-direction: column;
+	padding: 3rem;
+}
+.card__text-title {
+	font-family: var(--ff-frounces);
+	font-size: 3.5rem;
+	font-weight: 700;
+	line-height: 1;
+	padding: 0 1.2rem 0 0;
+	margin: 0 0 2rem;
+}
+.card__text-desc {
+	line-height: 2rem;
+	color: var(--dark-grayish-blue);
+	margin: 0 0 2rem;
+}
+.price {
+	display: flex;
+	align-items: center;
+	gap: 2rem;
+	margin: 0 0 2rem;
+	font-family: var(--ff-frounces);
+}
+.price-current {
+	font-size: 3rem;
+	font-weight: 700;
+	color: var(--dark-cyan);
+}
+.price-prev {
+	color: var(--dark-grayish-blue);
+	text-decoration: line-through;
+}
+.btn {
+	cursor: pointer;
+	padding: 1.5rem 2rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 1rem;
+	border: none;
+	border-radius: 1rem;
+	background-color: var(--dark-cyan);
+	color: var(--white);
+	font-weight: 700;
+	transition: background-color 0.1s ease-in, scale 0.1s ease-out;
+}
+.btn:hover {
+	background-color: var(--very-dark-blue);
+}
+.btn:active {
+	transform: scale(1.1);
+}
+@media (max-width: 37.4rem) {
+	.card {
+		grid-template-columns: 1fr;
+	}
+	.card__img {
+		border-top-right-radius: 1.5rem;
+		border-bottom-left-radius: 0;
+	}
+	.card__text-title {
+		padding: 0;
+	}
+	.attribution {
+		text-align: center;
+		font-size: 1rem;
+	}
+}
