@@ -16,7 +16,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [Github repository](https://github.com/Andy-Esm/fm-product-preview-card-component)
-- Live Site URL: [Github pages](https://your-live-site-url.com)
+- Live Site URL: [Github pages](https://andy-esm.github.io/fm-product-preview-card-component/)
 
 ## My process
 
